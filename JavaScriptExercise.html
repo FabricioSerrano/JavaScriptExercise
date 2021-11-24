@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Class</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+        function math(){
+            var num1 = 100;
+            var num2 = 567;
+            var result = (num1 * num2)/4;
+            alert('The math result is ' + result);
+        }
+
+
+        function changeImage(){
+            document.getElementById('image').src = "img/random2.png";
+        }
+
+        function returnImage(){
+            document.getElementById('image').src = "img/random.jpg";
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Exercise</h1>
+    </header>
+    
+    <div class="main">
+        <div class="card">
+            <h3>Calculation</h3>
+            <p>This button displays you to a predefined math calculation with a javascript alert</p>
+            <button onclick="math()">(100 x 567)/4</button>
+        </div>
+        <div class="card">
+            <h3>On Mouse Over</h3>
+            <p>This Image will change when you pass your mouse through it, and returns when you leave</p>
+            <img src="img/random.jpg" alt="random img" onmouseover="changeImage()" onmouseleave="returnImage()" id="image">
+        </div>
+        <div class="card">
+            <h3>Link</h3>
+            <p>This link will rediret you to some JavaScript explanations</p>
+            <a href="https://www.w3schools.com/js/default.asp" target="blank"> JavaScript explanations</a>
+        </div>
+        <div class="card">
+            <h3>Not working Link</h3>
+            <p>This link will not rediret you to some JavaScript explanations, because it is a Work In Progress</p>
+            <a href="#" onclick="alert('This link will not work'); return false">Work in Progress</a>
+        </div>
+        
+        
+    </div>
+
+
+</body>
+</html>
